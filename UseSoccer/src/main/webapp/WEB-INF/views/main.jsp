@@ -131,7 +131,7 @@
                                  <div class="bluid">
                                     <div class="foot_imgs">
                                        <a href="https://www.transfermarkt.com/statistik/vertragslosespieler" target="_blank"><img src="/img/de gea.jpg" alt=""/></a><br><br>
-                                       <b style="color:black">The most valuable free agents - from transfermarkt</b>
+                                       <a href="https://www.transfermarkt.com/statistik/vertragslosespieler" target="_blank"><b style="color:black">The most valuable free agents - from transfermarkt</b></a>
                                     </div>
                                  </div>
                               </div>
@@ -143,7 +143,7 @@
                                  <div class="bluid">
                                     <div class="foot_imgs">
                                        <a href="https://www.youtube.com/watch?v=33SLQTHPks8" target="_blank"><img src="/img/fergurson.jpg" alt=""/></a><br><br>
-                                       <b style="color:black">Why Evan Ferguson is the Premier League's most exciting young striker - from transfermarkt</b>
+                                       <a href="https://www.youtube.com/watch?v=33SLQTHPks8" target="_blank"><b style="color:black">Why Evan Ferguson is the Premier League's most exciting young striker - from transfermarkt</b></a>
                                     </div>
                                  </div>
                               </div>
@@ -155,7 +155,7 @@
                                  <div class="bluid">
                                     <div class="foot_imgs">
                                        <a href="https://www.transfermarkt.com/spieler-statistik/wertvollstemannschaften/marktwertetop" target="_blank"><img src="/img/haaland.jpg" alt=""/></a><br><br>
-                                       <b style="color:black">Three teams worth over €1bn - The most valuable squads in the world - from transfermarkt</b>
+                                       <a href="https://www.transfermarkt.com/spieler-statistik/wertvollstemannschaften/marktwertetop" target="_blank"><b style="color:black">Three teams worth over €1bn - The most valuable squads in the world - from transfermarkt</b></a>
                                     </div>
                                  </div>
                               </div>

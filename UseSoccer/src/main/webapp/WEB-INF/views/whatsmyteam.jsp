@@ -12,7 +12,7 @@
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <!-- site metas -->
-      <title>UseSoccer</title>
+      <title>UseSoccer - WhatsMyTeam</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -33,11 +33,17 @@
    
    <!-- style for css -->
    <style>
-   .input-for-player_info {
-   		border-radius: 10px;
-   		width: 400px;
-   		height: 36px;
-   		padding: 8px;
+   .user-data-input {
+   		border-radius: 5px;
+   		width: 60px;
+   		height: 30px;
+   		padding: 4px;
+   }
+   .user-data-input-name {
+   		border-radius: 5px;
+   		width: 180px;
+   		height: 30px;
+   		padding: 4px;
    }
    .btn-for-search {
    		border-radius: 10px;
@@ -48,11 +54,41 @@
 		background-color:#04B404;
    }
    
-   .img-emblem{
+   .img-emblem {
    		height: 30px;
    		width: 40px;
    }
    
+   .position_sel {
+   		border-radius: 7px;
+   		width: 140px;
+   		height: 30px;
+   }
+   .foot_sel {
+   		border-radius: 7px;
+   		width: 70px;
+   		height: 30px;
+   }
+   
+   .backNum_sel {
+   		border-radius: 5px;
+   		width: 45px;
+   		height: 30px;
+   }
+   .formation_sel {
+   		border-radius: 5px;
+   		width: 80px;
+   		height: 30px;
+   }
+   .tactic_sel {
+   		border-radius: 5px;
+   		width: 120px;
+   		height: 30px;
+   }
+   
+   .userData_tbl {
+   		width: 100%;
+   }
    </style>
    
    <!-- body -->
@@ -64,11 +100,8 @@
       <!-- end loader -->
       <div id="mySidepanel" class="sidepanel">
          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-         <a class="active" href="/main">Home</a>
-         <a href="/whatsmyteam">Games</a>
-<!--          <a href="/">About</a> -->
-<!--          <a href="/">Trainer</a> -->
-<!--          <a href="/">Contact</a> -->
+         <a href="/main">Home</a>
+         <a class="active" href="/whatsmyteam">Games</a>
       </div>
       
       <!-- header -->
@@ -131,7 +164,7 @@
                                  <div class="bluid">
                                     <div class="foot_imgs">
                                        <a href="https://www.transfermarkt.com/statistik/vertragslosespieler" target="_blank"><img src="/img/de gea.jpg" alt=""/></a><br><br>
-                                       <b style="color:black">The most valuable free agents - from transfermarkt</b>
+                                       <a href="https://www.transfermarkt.com/statistik/vertragslosespieler" target="_blank"><b style="color:black">The most valuable free agents - from transfermarkt</b></a>
                                     </div>
                                  </div>
                               </div>
@@ -143,7 +176,7 @@
                                  <div class="bluid">
                                     <div class="foot_imgs">
                                        <a href="https://www.youtube.com/watch?v=33SLQTHPks8" target="_blank"><img src="/img/fergurson.jpg" alt=""/></a><br><br>
-                                       <b style="color:black">Why Evan Ferguson is the Premier League's most exciting young striker - from transfermarkt</b>
+                                       <a href="https://www.youtube.com/watch?v=33SLQTHPks8" target="_blank"><b style="color:black">Why Evan Ferguson is the Premier League's most exciting young striker - from transfermarkt</b></a>
                                     </div>
                                  </div>
                               </div>
@@ -155,7 +188,7 @@
                                  <div class="bluid">
                                     <div class="foot_imgs">
                                        <a href="https://www.transfermarkt.com/spieler-statistik/wertvollstemannschaften/marktwertetop" target="_blank"><img src="/img/haaland.jpg" alt=""/></a><br><br>
-                                       <b style="color:black">Three teams worth over €1bn - The most valuable squads in the world - from transfermarkt</b>
+                                       <a href="https://www.transfermarkt.com/spieler-statistik/wertvollstemannschaften/marktwertetop" target="_blank"><b style="color:black">Three teams worth over €1bn - The most valuable squads in the world - from transfermarkt</b></a>
                                     </div>
                                  </div>
                               </div>
@@ -182,14 +215,104 @@
             <div class="row">
                <div class="col-md-10 offset-md-1">
                   <div class="titlepage text_align_center">
-                     <h2 style="font-size:34px;">원하는 선수의 이름으로 검색해보세요</h2><br><br>
-                     <input class="input-for-player_info" id="player_info"></input>&nbsp;&nbsp;&nbsp;<button class="btn-for-search" style="width:100px; height: 36px;" id="btnSearch">Search</button><br><br>
-                     <table class="table table-hover" id="tblPlayer">
+                     <h2 style="font-size:34px;">선호하는 스타일을 골라 자신의 팀을 알아보세요!</h2><br><br>
+                  	 <table class="userData_tbl" align="center">
+                  	 <thead>
+                  	 	<tr>
+                  	 		<th class=thnum>이름</th><th>키</th><th>몸무게</th><th>포지션</th><th>주발</th><th>등번호</th><th>포메이션</th><th>팀 전술1</th><th>팀 전술2</th>
+                  	 	</tr>
+                  	 </thead>
 
-					 </table><br>
-                     <table class="table table-hover" id="tblInfo">
-                     
-                     </table>
+					 <tbody>
+					 	<tr>
+							<td> <!-- 사용자 이름 (영문으로) -->
+								<input class="user-data-input-name" id="userE_Name" placeholder="영문으로 입력해주세요"></input>
+							</td> 
+									
+							<td> <!-- 사용자 키 -->
+								<input class="user-data-input" id="userHeight" placeholder="cm"></input></td> 
+									
+							<td> <!-- 사용자 몸무게 -->
+								<input class="user-data-input" id="userWeight" placeholder="kg"></input>
+							</td> 
+	                     
+	                     	<td> <!-- 사용자 선호 포지션 -->
+	                     		<select class="position_sel" id="user_position"> 
+			                     	<option value="GK">골키퍼</option>
+			                     	<option value="LB">왼쪽 풀백</option>
+			                     	<option value="LWB">왼쪽 윙백</option>
+			                     	<option value="RB">오른쪽 풀백</option>
+			                     	<option value="RWB">오른쪽 윙백</option>
+			                     	<option value="CB">센터백</option>
+			                     	<option value="DM">수비형 미드필더</option>
+			                     	<option value="LM">왼쪽 미드필더</option>
+			                     	<option value="RM">오른쪽 미드필더</option>
+			                     	<option value="CM">중앙 미드필더</option>
+			                     	<option value="AM">공격형 미드필더</option>
+			                     	<option value="LW">왼쪽 윙어</option>
+			                     	<option value="RW">오른쪽 윙어</option>
+			                     	<option value="SS">세컨드 스트라이커</option>
+			                     	<option value="CF">중앙 공격수</option>
+	                     		</select>
+	                     	</td>
+	                     
+	                     	<td> <!-- 사용자 주발 -->
+	                     		<select class="foot_sel" id="user_foot"> 
+			                     	<option value="오른발">오른발</option>
+			                     	<option value="왼발">왼발</option>
+			                     	<option value="양발">양발</option>
+	                     		</select>
+	                     	</td>
+	                     
+	                     	<td> <!-- 사용자 선호 등번호 -->
+	                     		<select class="backNum_sel" id="user_backNumber" name="user_backNumber"> 
+	                     			<!-- <option>1..99</option> -->
+	                     		</select>
+	                     	</td>
+	                     
+	                     	<td> <!-- 사용자 선호 포메이션 -->
+	                     		<select class="formation_sel" id="user_formation"> 
+			                     	<option value="4-3-3">4-3-3</option>
+			                     	<option value="4-4-2">4-4-2</option>
+			                     	<option value="4-2-3-1">4-2-3-1</option>
+			                     	<option value="4-1-4-1">4-1-4-1</option>
+			                     	<option value="4-5-1">4-5-1</option>
+			                     	<option value="4-2-2-2">4-2-2-2</option>
+			                     	<option value="4-3-1-2">4-3-1-2</option>
+			                     	<option value="4-3-2-1">4-3-2-1</option>
+			                     	<option value="4-2-4">4-2-4</option>
+			                     	<option value="5-3-2">5-3-2</option>
+			                     	<option value="5-4-1">5-4-1</option>
+			                     	<option value="5-2-3">5-2-3</option>
+			                     	<option value="3-5-2">3-5-2</option>
+			                     	<option value="3-4-3">3-4-3</option>
+			                     	<option value="3-4-2-1">3-4-2-1</option>
+			                     	<option value="3-5-1-1">3-5-1-1</option>
+			                     	<option value="3-1-4-2">3-1-4-2</option>
+			                     	<option value="3-4-1-2">3-4-1-2</option>
+	                     		</select>
+	                     	</td>
+	                     
+	                     	<td> <!-- 사용자 선호 팀 전술 1 -->
+	                     		<select class="tactic_sel" id="user_first_tactic"> 
+			                     	<option value="티키타카">티키타카</option>
+			                     	<option value="게겐프레싱">게겐프레싱</option>
+			                     	<option value="카테나치오">카테나치오(빗장수비st)</option>
+			                     	<option value="카운터어택">카운터어택</option>
+	                     		</select>
+	                     	</td>
+	                     
+	                     	<td> <!-- 사용자 선호 팀 전술 2 -->
+	                     		<select class="tactic_sel" id="user_second_tactic"> 
+	                     			<option value=""></option>
+	                     		</select>
+	                     	</td>
+						</tr>
+					</tbody>                     
+                  	</table>
+                  	
+	                <br><br><button class="btn-for-search" style="width:100px; height: 36px;" id="btnSearch">Search</button><br><br>
+	                
                   </div>
                </div>
             </div>
@@ -225,10 +348,7 @@
                      <div class="menu_bottom text_align_center">
                         <ul>
                            <li><a href="/main">Home</a></li>
-<!--                            <li><a href="about.html">About</a></li> -->
-<!--                            <li><a href="games.html">Games</a></li> -->
-<!--                            <li><a href="tranner.html">Trainer</a></li> -->
-<!--                            <li><a href="contact.html">Contact</a></li> -->
+                           <li><a href="/whatsmyteam">Games</a></li>
                         </ul>
                      </div>
                   </div>
@@ -250,17 +370,26 @@
    </body>
    
 <!-- Javascript files-->
-<!-- <script src="js/jquery.min.js"></script> -->
 <script src="js/bootstrap.bundle.min.js"></script>
-<!-- <script src="js/jquery-3.0.0.min.js"></script> -->
 <script src="js/custom.js"></script>
-<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
-<!-- <script src="js/main.js" type="text/javascript"></script> -->
 <!-- end Javascript files -->
 
 <script src="https://code.jquery.com/jquery-latest.js"></script>
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 <script>
+$(document)
+
+// 사용자의 선호 등번호 select part
+const backNumberSel = document.getElementById("user_backNumber");
+
+for (let i = 1; i <= 99; i++) {
+    const option = document.createElement("option");
+    option.value = i;
+    option.text = i;
+    backNumberSel.add(option);
+}
+// end 등번호 select part
+
 $(document)
 .on('click','#btnSearch',function(){
 	if($('#player_info').val()==null || $('#player_info').val()=='') {
