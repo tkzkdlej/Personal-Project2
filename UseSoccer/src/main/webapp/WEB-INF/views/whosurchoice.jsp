@@ -12,7 +12,7 @@
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <!-- site metas -->
-      <title>UseSoccer - WhatsMyTeam</title>
+      <title>UseSoccer - WhosUrChoice</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -98,8 +98,8 @@
       <div id="mySidepanel" class="sidepanel">
          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
          <a href="/main">Home</a>
-         <a class="active" href="/whatsmyteam">WhatsMyTeam</a>
-         <a href="/whosurchoice">WhosUrChoice</a>
+         <a href="/whatsmyteam">WhatsMyTeam</a>
+         <a class="active" href="/whosurchoice">WhosUrChoice</a>
       </div>
       
       <!-- header -->
@@ -213,96 +213,12 @@
             <div class="row">
                <div class="col-md-10 offset-md-1">
                   <div class="titlepage text_align_center">
-                     <h2 style="font-size:33px;">선호하는 스타일을 골라 자신의 팀을 알아보세요!</h2>
-                     <h3 style="font-size:11px; color:red;">*유럽 5대리그기준 (epl,라리가,분데스리가,세리에A,리그앙) 상위권 팀들 한정으로 서비스가 제공됩니다.*</h3><br><br>
-                  	 <table class="userData_tbl" align="center">
-                  	 <thead>
-                  	 	<tr>
-                  	 		<th class=thnum>이름</th><th>포지션</th><th>등번호</th><th>포메이션</th><th>팀 전술</th>
-                  	 	</tr>
-                  	 </thead>
-
-					 <tbody>
-					 	<tr>
-							<td> <!-- 사용자 이름 (영문으로) -->
-								<input class="user-data-input-name" id="userE_Name" placeholder="영문으로 입력해주세요"></input>
-							</td> 
-									
-<!-- 							<td> 사용자 키 -->
-<!-- 								<input class="user-data-input" id="userHeight" placeholder="cm"></input></td>  -->
-									
-<!-- 							<td> 사용자 몸무게 -->
-<!-- 								<input class="user-data-input" id="userWeight" placeholder="kg"></input> -->
-<!-- 							</td>  -->
-	                     
-	                     	<td> <!-- 사용자 선호 포지션 -->
-	                     		<select class="position_sel" id="user_position"> 
-			                     	<option value="goalkeeper">골키퍼</option>
-			                     	<option value="defender">수비수</option>
-			                     	<option value="midfieder">미드필더</option>
-			                     	<option value="winger">윙어</option>
-			                     	<option value="striker">스트라이커</option>
-	                     		</select>
-	                     	</td>
-	                     
-<!-- 	                     	<td> 사용자 주발 -->
-<!-- 	                     		<select class="foot_sel" id="user_foot">  -->
-<!-- 			                     	<option value="오른발">오른발</option> -->
-<!-- 			                     	<option value="왼발">왼발</option> -->
-<!-- 			                     	<option value="양발">양발</option> -->
-<!-- 	                     		</select> -->
-<!-- 	                     	</td> -->
-	                     
-	                     	<td> <!-- 사용자 선호 등번호 -->
-	                     		<select class="backNum_sel" id="user_backNumber" name="user_backNumber"> 
-	                     			<!-- <option>1..99</option> -->
-	                     		</select>
-	                     	</td>
-	                     
-	                     	<td> <!-- 사용자 선호 포메이션 -->
-	                     		<select class="formation_sel" id="user_formation"> 
-			                     	<option value="3-1-4-2">3-1-4-2</option>
-			                     	<option value="3-2-4-1">3-2-4-1</option>
-			                     	<option value="3-4-1-2">3-4-1-2</option>
-			                     	<option value="3-4-2-1">3-4-2-1</option>
-			                     	<option value="3-4-3">3-4-3</option>
-			                     	<option value="3-5-2">3-5-2</option>
-			                     	<option value="4-1-4-1">4-1-4-1</option>
-			                     	<option value="4-2-2-2">4-2-2-2</option>
-			                     	<option value="4-2-3-1">4-2-3-1</option>
-			                     	<option value="4-3-3">4-3-3</option>
-			                     	<option value="4-4-2">4-4-2</option>
-	                     		</select>
-	                     	</td>
-	                     
-	                     	<td> <!-- 사용자 선호 팀 전술 1 -->
-	                     		<select class="tactic_sel" id="user_tactics"> 
-			                     	<option value="티키타카">티키타카</option>
-			                     	<option value="점유율 중시">점유율 중시</option>
-			                     	<option value="빠른역습">빠른역습</option>
-			                     	<option value="측면플레이">측면플레이</option>
-			                     	<option value="롱볼플레이">롱볼플레이</option>
-			                     	<option value="게겐프레싱">게겐프레싱</option>
-			                     	<option value="유연한 압박">유연한 압박</option>
-			                     	<option value="카테나치오(빗장수비)">카테나치오(빗장수비)</option>
-			                     	<option value="버스 세우기">버스 세우기</option>
-	                     		</select>
-	                     	</td>
-	                     
-<!-- 	                     	<td> 사용자 선호 팀 전술 2 -->
-<!-- 	                     		<select class="tactic_sel" id="user_second_tactic">  -->
-<!-- 	                     			<option value=""></option> -->
-<!-- 	                     		</select> -->
-<!-- 	                     	</td> -->
-						</tr>
-					</tbody>                     
-                  	</table>
-                  	
-	                <br><button class="btn-for-search" style="width:100px; height: 36px;" id="btnSearch">Search</button><br>
-	                <table class="table table-hover" id="tbl_for_myTeam">
-                     
-                    </table>
-                  </div>
+					 <form method="post" action="/choose">
+						<label>메시 <input type="radio" name="choice" value="메시"></label><br>
+						<label>펠레 <input type="radio" name="choice" value="펠레"></label><br>
+						<input type="submit" value="선택">
+					 </form>				 
+				  </div>
                </div>
             </div>
          </div>

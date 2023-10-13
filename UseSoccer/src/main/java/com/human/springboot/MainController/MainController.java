@@ -6,13 +6,13 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
+//import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.client.RestTemplate;
 
-import jakarta.servlet.http.HttpServletRequest;
+//import jakarta.servlet.http.HttpServletRequest;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 //import java.util.Optional;
@@ -28,11 +28,6 @@ public class MainController {
     @GetMapping("/main")
     public String showMain() {
         return "main";
-    }
-    
-    @GetMapping("/whatsmyteam")
-    public String showWhatsMyTeam() {
-    	return "whatsmyteam";
     }
     
     // 선수관련 기사,동영상,사진 select

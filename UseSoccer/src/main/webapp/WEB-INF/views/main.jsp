@@ -65,10 +65,8 @@
       <div id="mySidepanel" class="sidepanel">
          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
          <a class="active" href="/main">Home</a>
-         <a href="/whatsmyteam">Games</a>
-<!--          <a href="/">About</a> -->
-<!--          <a href="/">Trainer</a> -->
-<!--          <a href="/">Contact</a> -->
+		 <a href="/whatsmyteam">WhatsMyTeam</a>
+         <a href="/whosurchoice">WhosUrChoice</a>
       </div>
       
       <!-- header -->
@@ -183,7 +181,7 @@
                <div class="col-md-10 offset-md-1">
                   <div class="titlepage text_align_center">
                      <h2 style="font-size:34px;">원하는 선수의 이름으로 검색해보세요</h2><br><br>
-                     <input class="input-for-player_info" id="player_info"></input>&nbsp;&nbsp;&nbsp;<button class="btn-for-search" style="width:100px; height: 36px;" id="btnSearch">Search</button><br><br>
+                     <input class="input-for-player_info" id="player_info" placeholder="선수 이름을 입력해주세요."></input>&nbsp;&nbsp;&nbsp;<button class="btn-for-search" style="width:100px; height: 36px;" id="btnSearch">Search</button><br><br>
                      <table class="table table-hover" id="tblPlayer">
 
 					 </table><br>
