@@ -17,10 +17,6 @@ public class WhosurchoiceController {
     	return "whosurchoice";
     }
 	
-	@PostMapping("/choose")
-    public String makeChoice(@RequestParam String choice, Model model) {
-        model.addAttribute("selectedChoice", choice);
-        return "result"; // result.html로 포워딩
-    }
+	
 	
 }
